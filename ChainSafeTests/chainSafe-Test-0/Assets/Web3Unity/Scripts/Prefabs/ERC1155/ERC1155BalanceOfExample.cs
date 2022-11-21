@@ -7,13 +7,14 @@ public class ERC1155BalanceOfExample : MonoBehaviour
 {
     async void Start()
     {
-        string chain = "ethereum";
-        string network = "goerli";
-        string contract = "0x2c1867bc3026178a47a677513746dcc6822a137a";
-        string account = "0xd25b827D92b0fd656A1c829933e9b0b836d5C3e2";
-        string tokenId = "0x01559ae4021aee70424836ca173b6a4e647287d15cee8ac42d8c2d8d128927e5";
+        string chain = "avalanche";
+        string network = "mainnet";
+        string contract = "0xa695ea0C90D89a1463A53Fa7a02168Bc46FbBF7e";
+        string account = "0x47d3a62a293b5521a161b0dd6a825c0218224d4e";
+        string tokenId = "130";
 
         BigInteger balanceOf = await ERC1155.BalanceOf(chain, network, contract, account, tokenId);
         print(balanceOf);
+        print("test: " + balanceOf);
     }
 }
